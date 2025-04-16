@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays and loops</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+    <script>
+        //Loops in JS
+        /*
+        let i = 1;
+        while(i <= 5){
+            console.log(i);
+            i++;
+        }
+        for(let i= 1; i< 9;i++){
+            console.log(i);
+        }
+            */
+        
+     const myArray = [101,205,39,79,44,78,777];
+     let total = 0;
+     for(let index = 0; index <= myArray.length-1; index++){
+        const num = myArray[index];
+        total += num;
+       console.log(myArray[index]);
+        //console.log(index);
+     }
+     console.log(total);
+    //    console.log(myArray);
+    //   console.log(Array.isArray(myArray));//Check if this is array
+    //   //Some array methods
+    //   console.log(myArray.push(800));
+    //   console.log(myArray);
+    //   console.log(myArray.slice(0, 2));
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booleans</title>
+    <link rel="stylesheet" href="css/01-paper-rock.css">
+</head>
+<body>
+    <p class="title">Rock Paper Scissors</p>
+    <button onclick="
+        playGame('rock');
+    ">Rock🙌</button>
+    <button onclick="
+        playGame('paper');    
+    ">Paper👌</button>
+     <button onclick="        
+            playGame('scissors');
+     ">Scissors🤞</button>
+
+    <p class="js-result"></p>
+    <p class="js-moves"></p>
+    <p class="js-score">
+
+    </p>
+
+     <button onclick="
+        score.wins = 0;
+        score.losses = 0;
+        score.ties = 0;
+        //Here I am deleting every score from the previous sections of game played when the reset button iss clicked 
+        localStorage.removeItem('score');
+        updateScoreElement();
+     "
+     >Reset Score</button>
+    <script src="js/01.paperr-rock.js"></script>
+</body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>DOM projects</title>
+        <style>
+
+            body{
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .cost{
+                border: none;
+                background-color: #003afa;
+                color: whitesmoke;
+                padding: 10px;
+                border-radius: 50px;
+            }
+            .cs-input{
+                padding: 10px;
+                font-size: 15px;
+                border-radius: 10px;
+                }
+            .btn-1{
+                border: none;
+                background-color: #000b22;
+                color: #d6faac;
+                font-weight: bold;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                padding-left: 15px;
+                padding-right: 15px;
+                border-radius: 50px;
+                cursor: pointer;
+                margin-bottom: 50px;
+            }
+            .is-yes{
+                background-color: #09cebd;
+                color: #ffffff;
+            }
+        </style>
+    </head>
+    <body>
+        <p>
+            Do you love JESUS?
+        </p>
+        <button onclick="Response();
+        " class="js-yes btn-1">Yes</button>
+        <p>
+            LUXE shipping Calculator
+        </p>
+        <p>
+            Orders under GHC 100 = +50
+        </p>
+        <p>
+            Orders over GHC 1000 = FREE
+        </p>
+            <input type="text" name="" id="" onkeydown="handleKeyPress(); " placeholder="Cost of order" class="js-input cs-input">
+
+        <button class="cost" onclick="totalCost();">Calculate</button>
+        <p class="js-show-cost"></p>
+        <script>
+
+            function handleKeyPress(){
+                if (event.key === 'Enter'){
+                    totalCost();
+                }
+            }
+
+            function totalCost(){
+               const inputElement = document.querySelector('.js-input');
+               let cost = Number(inputElement.value);
+               if(cost  <= 100){
+                /*document.querySelector('.js-show-cost').innerHTML =*/
+                cost += 50;
+               }
+               
+                document.querySelector('.js-show-cost').innerHTML = ` Your cost of shipping is GHC: ${cost}`;
+               
+
+            }
+            function Response(){
+                const buttonElement = document.querySelector('.js-yes');
+                if (buttonElement.innerHTML === 'Yes'){
+                    buttonElement.innerHTML = 'Jesus Always LOVE You!';
+                    buttonElement.classList.add('is-yes');
+                }
+                else{
+                    buttonElement.innerHTML = 'Yes';
+                    buttonElement.classList.remove('is-yes');
+                }
+            }
+
+        </script>
+    </body>
+</html>
